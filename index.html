@@ -1,51 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Project tracking</title>
+
+  <title>Project tracking</title> 
+  <!-- prettier alt + shift + f  -->
 
   <!-- Google Fonts -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet">
 
   <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
   <style>
-    .attribution { 
-      font-size: 11px; text-align: center; 
+    .attribution {
+      font-size: 11px;
+      text-align: center;
     }
+
     .attribution a {
-      color: hsl(228, 45%, 44%); 
+      color: hsl(228, 45%, 44%);
+    }
+    .dot {
+      color: red;
+      padding: 20px;
     }
   </style>
-  
+
 </head>
+
 <body>
-  Product
-  Features
-  Pricing
-  Login
 
-  New
-  Monograph Dashboard
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./images/logo.svg">
+      </div>
 
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
+      <div class="nav_menu">
+        <a href="#">PRODUCT</a>
+        <a href="#">FEATURES</a>
+        <a href="#">PRICING</a>
+        <a href="#" class="dot">&#x2022</a>
+        <a href="#">LOGIN</a>
+      </div>
 
-  Schedule a demo
-  to see a live preview
-  
+      <div class="hamburger_icon">
+        <img src="./images/icon-hamburger.svg" id="hamburger">
+        <img src="./images/icon-close.svg" id="close">
+      </div>
+    </nav>
+  </header>
+
+  <!-- <div class="absolute">
+    <img src="./images/illustration-devices.svg">
+  </div> -->
+
+  <section class="flex">
+    <div class="hero_img">
+      <img src="./images/illustration-devices.svg" alt="">
+    </div>
+
+    <div class="flex_content">
+      <h3><span>NEW</span>MONOGRAPH DASHBOARD</h3>
+      <h1>POWERFUL INSIGHTS INTO YOUR TEAM</h1>
+      <p>Project planning and time tracking for agile teams</p>
+      <div class="btn">
+        <button>SCHEDULE A DEMO</button>
+        <button>TO SEE A LIVE PREVIEW</button>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+
+  <script src="./app/js/script.js"></script>
 </body>
+
 </html>
