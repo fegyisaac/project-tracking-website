@@ -1,5 +1,6 @@
-@use './colours.scss' as *;
-@use './fonts.scss' as *;
+@use "./colours.scss" as *;
+@use "./fonts.scss" as *;
+@use '../utils' as *;
 
 html {
   font-size: 100%;
@@ -11,12 +12,45 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+ 
 body {
   margin: 0;
   padding: 0;
   font-family: $font-Barlow;
   // background: $LGrayish_Blue;
-  background: blue;
+  background-color: $white;
   color: $Dark_Blue;
+  position: relative;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  min-width: 100vw;
+  padding: 30px 5px;
+}
+
+.container {
+  width: 88%;
+  margin: 0  auto;
+}
+
+.absolute {
+  background: $LGrayish_Blue;
+  width: 50%;
+  height: rem(330);
+  border-bottom-left-radius: rem(55);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -100;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  font-family: $font-Barlow-Condensed;
 }

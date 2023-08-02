@@ -1,0 +1,94 @@
+// <section class="flex">
+// <div class="hero_img">
+//   <img src="./images/illustration-devices.svg" alt="">
+// </div>
+
+// <div class="flex_content">
+//   <h3><span>NEW </span>MONOGRAPH DASHBOARD</h3>
+//   <h1>h1>
+//   <p>Pteams</p>
+//   <div class="btn">
+//     <button>
+//     <button>
+//   </div>
+// </div>
+// </section>
+
+@use '../utils' as *;
+@use '../globals' as *;
+
+.flex {
+    width: 100%;
+
+
+    .hero_img{
+        position: relative;
+        // position: absolute;
+        height: rem(250);
+        width: 390px;
+        z-index: -1;
+        padding: 10px 0 50px;
+        
+        
+        img{
+            right: -40px;
+            position: absolute;
+        }
+    }
+
+
+
+
+
+
+    .flex_content{
+        h3 {
+            color: $Grayish_Blue;
+            font-size: rem(15);
+            padding-bottom: 12px;
+            
+            span {
+                background-color: $Dark_Blue;
+                color: $white;
+                padding: 3px 6px;
+                border-radius: 11px;
+            }
+        }
+        
+        h1{
+            max-width: rem(280);
+            font-family: $font-Barlow-Condensed;
+            // text-size-adjust: ;
+        }
+        p{
+            color: $Grayish_Blue;
+            width: rem(250);
+            padding-bottom: 10px;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: rem(10);
+            
+            button{
+                font-size: 12px;
+                border-radius: 5px;
+                background: $Red;
+                color: $white;
+                padding: 10px 12px;
+                transition: background 0.25s;
+
+                &:hover {
+                    background: $LRed;
+                }
+
+            }
+
+            button:nth-of-type(2) {
+                background: inherit;
+                color: $Grayish_Blue;
+            }
+        }
+    }
+}

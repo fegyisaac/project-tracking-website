@@ -14,7 +14,7 @@ h1 {
   @include breakpoint(large) {
     font-size: rem(28);
   }
-}
+} 
 
 h2 {
   font-size: rem(24);
@@ -26,4 +26,5 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
+  cursor: pointer;
 }
