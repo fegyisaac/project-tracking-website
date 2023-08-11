@@ -30,12 +30,24 @@ img {
 
 header {
   min-width: 100vw;
-  padding: 30px 5px;
 }
 
 .container {
   width: 88%;
   margin: 0  auto;
+
+  @include media('>=tablet') {
+    width: 92%;
+  }
+
+  @include media('>=desktop') {
+    width: 88%;
+  }
+
+  @include media('>=1150px') {
+    width: 85%;
+  }
+
 }
 
 .absolute {

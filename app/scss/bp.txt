@@ -1,0 +1,10 @@
+$breakpoint: {
+    'xs': 
+    'sm':
+    'md':
+    'lg':
+    'xl':
+    'xxl':
+}
+
+@ 

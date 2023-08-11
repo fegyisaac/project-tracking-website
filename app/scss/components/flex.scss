@@ -1,94 +1,185 @@
-// <section class="flex">
-// <div class="hero_img">
-//   <img src="./images/illustration-devices.svg" alt="">
-// </div>
-
-// <div class="flex_content">
-//   <h3><span>NEW </span>MONOGRAPH DASHBOARD</h3>
-//   <h1>h1>
-//   <p>Pteams</p>
-//   <div class="btn">
-//     <button>
-//     <button>
-//   </div>
-// </div>
-// </section>
-
-@use '../utils' as *;
-@use '../globals' as *;
+@use "../utils" as *;
+@use "../globals" as *;
 
 .flex {
-    width: 100%;
+  width: 100%;
 
+  @include media(">=tablet") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 60px 0 30px;
+  }
 
-    .hero_img{
-        position: relative;
-        // position: absolute;
-        height: rem(250);
-        width: 390px;
-        z-index: -1;
-        padding: 10px 0 50px;
-        
-        
-        img{
-            right: -40px;
-            position: absolute;
-        }
+  .hero_img {
+    position: relative;
+    // position: absolute;
+    height: rem(250);
+    width: 390px;
+    z-index: -1;
+    padding: 10px 0 50px;
+
+    @include media(">=phone") {
+      z-index: 10;
+      position: inherit;
+      width: 100%;
+      height: inherit;
+      padding: 0;
+      margin: 10px 0 30px;
     }
 
-
-
-
-
-
-    .flex_content{
-        h3 {
-            color: $Grayish_Blue;
-            font-size: rem(15);
-            padding-bottom: 12px;
-            
-            span {
-                background-color: $Dark_Blue;
-                color: $white;
-                padding: 3px 6px;
-                border-radius: 11px;
-            }
-        }
-        
-        h1{
-            max-width: rem(280);
-            font-family: $font-Barlow-Condensed;
-            // text-size-adjust: ;
-        }
-        p{
-            color: $Grayish_Blue;
-            width: rem(250);
-            padding-bottom: 10px;
-        }
-        .btn{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: rem(10);
-            
-            button{
-                font-size: 12px;
-                border-radius: 5px;
-                background: $Red;
-                color: $white;
-                padding: 10px 12px;
-                transition: background 0.25s;
-
-                &:hover {
-                    background: $LRed;
-                }
-
-            }
-
-            button:nth-of-type(2) {
-                background: inherit;
-                color: $Grayish_Blue;
-            }
-        }
+    @include media(">=tablet") {
+      margin: 0;
+      position: relative;
+      width: 100%;
     }
+
+    img {
+      right: -40px;
+      position: absolute;
+
+      @include media(">=phone") {
+        position: inherit;
+      }
+
+      @include media(">=tablet") {
+        position: absolute;
+        right: -210px;
+        top: -100px;
+        width: rem(500);
+      }
+
+      @include media(">=840px") {
+        position: absolute;
+        right: -210px;
+        top: -100px;
+        width: rem(650);
+      }
+
+      @include media(">=desktop") {
+        position: absolute;
+        right: -290px;
+        top: -130px;
+        width: rem(750);
+      }
+
+      @include media(">=1150px") {
+        position: absolute;
+        right: -290px;
+        top: -130px;
+        width: rem(890);
+      }
+    }
+  }
+
+  .flex_content {
+    h3 {
+      color: $Grayish_Blue;
+      font-size: rem(15);
+      padding-bottom: 15px;
+
+      span {
+        background-color: $Dark_Blue;
+        color: $white;
+        padding: 3px 6px;
+        border-radius: 11px;
+      }
+
+      @include media(">=phone") {
+        margin: 0;
+        font-size: rem(17);
+      }
+
+      @include media(">=tablet") {
+        font-size: rem(14);
+        padding-bottom: 19px;
+      }
+
+      @include media(">=840px") {
+        font-size: 17px;
+      }
+    }
+
+    h1 {
+      max-width: rem(280);
+      font-family: $font-Barlow-Condensed;
+      // text-size-adjust: ;
+
+      @include media(">=phone") {
+        font-size: rem(32);
+        max-width: rem(400);
+        margin: 0;
+        padding-bottom: 10px;
+        // font-size: rem(17);
+      }
+
+      @include media(">=tablet") {
+        min-width: rem(400);
+        font-size: rem(30);
+        padding-bottom: 19px;
+      }
+
+      @include media(">=desktop") {
+        min-width: rem(470);
+        font-size: rem(35);
+        padding-bottom: 20px;
+      }
+    }
+
+    p {
+      color: $Grayish_Blue;
+      width: rem(250);
+      padding-bottom: 10px;
+
+      @include media(">=phone") {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        width: rem(300);
+      }
+      
+      @include media(">=desktop") {
+        font-size: rem(19);
+        padding-bottom: 30px;
+      }
+      
+      @include media(">=1150px") {
+        width: rem(350);
+        font-size: rem(20);
+      }
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(10);
+
+    @include media(">=phone") {
+      width: rem(320);
+    }
+
+    @include media('<360px') {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    button {
+      font-size: 12px;
+      border-radius: 5px;
+      background: $Red;
+      color: $white;
+      padding: 10px 12px;
+      transition: background 0.25s;
+
+      &:hover {
+        background: $LRed;
+      }
+    }
+
+    button:nth-of-type(2) {
+      background: inherit;
+      color: $Grayish_Blue;
+    }
+  }
 }
