@@ -138,12 +138,12 @@
         padding-bottom: 20px;
         width: rem(300);
       }
-      
+
       @include media(">=desktop") {
         font-size: rem(19);
         padding-bottom: 30px;
       }
-      
+
       @include media(">=1150px") {
         width: rem(350);
         font-size: rem(20);
@@ -160,7 +160,7 @@
       width: rem(320);
     }
 
-    @include media('<360px') {
+    @include media("<360px") {
       flex-direction: column;
       align-items: flex-start;
     }

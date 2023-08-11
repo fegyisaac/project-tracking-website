@@ -1,6 +1,6 @@
 @use "./colours.scss" as *;
 @use "./fonts.scss" as *;
-@use '../utils' as *;
+@use "../utils" as *;
 
 html {
   font-size: 100%;
@@ -12,7 +12,7 @@ html {
 *::after {
   box-sizing: inherit;
 }
- 
+
 body {
   margin: 0;
   padding: 0;
@@ -22,6 +22,8 @@ body {
   color: $Dark_Blue;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 img {
@@ -34,20 +36,19 @@ header {
 
 .container {
   width: 88%;
-  margin: 0  auto;
+  margin: 0 auto;
 
-  @include media('>=tablet') {
+  @include media(">=tablet") {
     width: 92%;
   }
 
-  @include media('>=desktop') {
+  @include media(">=desktop") {
     width: 88%;
   }
 
-  @include media('>=1150px') {
+  @include media(">=1150px") {
     width: 85%;
   }
-
 }
 
 .absolute {
@@ -61,7 +62,7 @@ header {
   z-index: -100;
 }
 
-button{
+button {
   border: none;
   cursor: pointer;
   font-family: $font-Barlow-Condensed;

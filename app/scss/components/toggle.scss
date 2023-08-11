@@ -4,8 +4,7 @@
   width: rem(25);
   cursor: pointer;
 
-
-  @include media('>=500px') {
+  @include media(">=500px") {
     display: none;
   }
   img:nth-of-type(1) {

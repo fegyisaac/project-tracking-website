@@ -16,12 +16,12 @@ nav {
     padding: 15px 0 20px;
     margin: 0 auto;
   }
-  
-  @include media('>=tablet') {
+
+  @include media(">=tablet") {
     padding: 25px 0 20px;
     width: 100%;
   }
-  @include media('>=desktop') {
+  @include media(">=desktop") {
     padding: 40px 0 35px;
   }
 
@@ -60,20 +60,18 @@ nav {
       gap: 12px;
       height: inherit;
     }
-    
+
     @include media(">=840px") {
       min-width: 450px;
       font-size: 17px;
       gap: 25px;
     }
 
-    @include media('>=desktop') {
+    @include media(">=desktop") {
       // gap: 10px;
       min-width: 390px;
       font-size: 15px;
     }
-
-
 
     .dot {
       display: none;
